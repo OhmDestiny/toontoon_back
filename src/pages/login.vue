@@ -13,17 +13,36 @@
       />
 
       <div class="inputBar col">
-        <q-input outlined v-model="input.username" label="Username" />
+        <q-input outlined v-model="username" label="Username" />
       </div>
 
       <div class="inputBar q-pt-md">
-        <q-input outlined v-model="input.password" label="Password" />
+        <q-input
+          outlined
+          v-model="password"
+          :type="isPwd ? 'password' : 'text'"
+          label="Password"
+        >
+          <template v-slot:append>
+            <q-icon
+              :name="isPwd ? 'visibility_off' : 'visibility'"
+              class="cursor-pointer"
+              @click="isPwd = !isPwd"
+            />
+          </template>
+        </q-input>
       </div>
 
       <div class="row">
         <div class="col-3"></div>
         <div class="col q-pt-xl">
-          <q-btn class="signinBtn" unelevated color="primary" label="Sign in" />
+          <q-btn
+            @click="goToMian()"
+            class="signinBtn"
+            unelevated
+            color="primary"
+            label="Sign in"
+          />
         </div>
         <div class="col-3"></div>
       </div>
@@ -32,14 +51,19 @@
 </template>
 
 <script>
+// import { ref } from "@vue/reactivity";
 export default {
   data() {
     return {
-      input: {
-        username: "",
-        password: "",
-      },
+      username: "",
+      password: "",
+      isPwd: true,
     };
+  },
+  methods: {
+    goToMian() {
+      this.$router.push("/home");
+    },
   },
 };
 </script>

@@ -16,9 +16,19 @@ const routes = [
     component: () => import("pages/login.vue"),
   },
   {
-    path: "/*",
+    path: "/test",
+    component: () => import("pages/test.vue"),
+  },
+  {
+    path: "/home",
     component: () => import("pages/home.vue"),
   },
+  //// Layout /////
+  // {
+  //   path: "/main",
+  //   component: () => import("layouts/leftMenu.vue"),
+  //   children: [{ path: "/home", component: () => import("pages/home.vue") }],
+  // },
 ];
 
 export default routes;

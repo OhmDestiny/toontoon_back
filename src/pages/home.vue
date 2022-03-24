@@ -1,7 +1,5 @@
 <template>
-  <div class="mainBG">
-    <menubar></menubar>
-  </div>
+  <div class="mainBG"></div>
 </template>
 
 <script>
@@ -15,6 +13,8 @@ export default {
 
 <style lang="scss" scoped>
 .mainBG {
-  background-color: #f6f7fb;
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 100vh;
 }
 </style>
