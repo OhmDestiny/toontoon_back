@@ -1,12 +1,18 @@
 <template>
   <div class="mainBG"></div>
+  <menubar></menubar>
+  <optionbar></optionbar>
 </template>
 
 <script>
 import menubar from "../components/load/menubar.vue";
+import optionbar from "../components/load/optionbar.vue";
+import cartoonbox from "../components/load/cartoonbox.vue";
 export default {
   components: {
     menubar,
+    optionbar,
+    cartoonbox,
   },
 };
 </script>
