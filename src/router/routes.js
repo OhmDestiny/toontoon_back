@@ -19,6 +19,10 @@ const routes = [
     path: "/home",
     component: () => import("pages/home.vue"),
   },
+  {
+    path: "/category",
+    component: () => import("pages/category.vue"),
+  },
   //// Layout /////
   // {
   //   path: "/main",

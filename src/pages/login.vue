@@ -40,6 +40,7 @@
             @click="goToMian()"
             class="signinBtn"
             unelevated
+            no-caps
             color="primary"
             label="Sign in"
           />

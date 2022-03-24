@@ -1,6 +1,10 @@
 <template>
   <div
+<<<<<<< Updated upstream
     class="desktop-only shadow-6 q-pl-md q-pt-lg q-pb-md"
+=======
+    class="desktop-only q-pl-md q-pt-lg q-pb-md"
+>>>>>>> Stashed changes
     style="
       background-color: #f6f7fb;
       width: 100%;

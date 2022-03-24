@@ -1,1 +1,44 @@
 // app global css in SCSS form
+// app global css in SCSS form
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+  font-family: "prompt";
+}
+.brx {
+  border: 1px solid red;
+}
+.bry {
+  border: 1px solid green;
+}
+// ----------  font ----------
+.font24 {
+  font-size: 24px;
+}
+.font18 {
+  font-size: 18px;
+}
+.font16 {
+  font-size: 16px;
+}
+.font14 {
+  font-size: 14px;
+}
+.font12 {
+  font-size: 12px;
+}
+.fontU {
+  text-decoration: underline;
+}
+.fontB {
+  font-weight: bold;
+}
+.fontB700 {
+  font-weight: 700;
+}
+.textWhite {
+  color: white;
+}
+.textAllColor {
+  color: #f6f7fb;
+  cursor: pointer;
+}
