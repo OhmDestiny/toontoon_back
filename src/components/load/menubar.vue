@@ -1,10 +1,6 @@
 <template>
   <div
-<<<<<<< Updated upstream
-    class="desktop-only shadow-6 q-pl-md q-pt-lg q-pb-md"
-=======
-    class="desktop-only q-pl-md q-pt-lg q-pb-md"
->>>>>>> Stashed changes
+    class="desktop-only shadow-2"
     style="
       background-color: #f6f7fb;
       width: 100%;
@@ -15,22 +11,25 @@
   >
     <div class="bar">
       <!-- giraffprofile -->
-      <div class="row">
-        <img
-          class="q-pt-md q-pl-md"
-          src="~assets/log_in_picture/giraffe.png"
-          alt="giraff"
-          style="height: 135px"
-        />
-        <div class="textProfile q-pt-xs" align="left">AunNy</div>
-        <div class="col-2"></div>
+      <div class="row items-center">
+        <div class="col">
+          <img
+            class="q-pt-md q-pl-md"
+            src="~assets/log_in_picture/giraffe.png"
+            alt="giraff"
+            style="height: 135px"
+          />
+        </div>
+        <div class="col-6">
+          <div class="textProfile" align="left">AunNy</div>
+          <div class="textProfile" align="left">ผู้ดูแลระบบ</div>
+        </div>
       </div>
       <!-- menubar -->
       <!-- manga -->
-      <div class="row menuBar">
+      <div class="items-center row menuBar">
         <div class="col"></div>
         <img
-          class="q-pt-sm"
           src="~assets/menu_bar_symbol/books.svg"
           alt="books"
           style="width: 30px"
@@ -39,10 +38,10 @@
         <div class="textMenu col-5 q-pt-sm">หนังสือ</div>
         <div class="col"></div>
       </div>
-      <div class="menuGap"></div>
+
       <hr style="width: 270px" />
       <!-- category -->
-      <div class="row menuBar">
+      <div @click="goToCategoryPage()" class="row items-center menuBar">
         <div class="col"></div>
         <img
           class="q-pt-sm"
@@ -54,10 +53,10 @@
         <div class="textMenu col-5 q-pt-sm">หมวดหมู่</div>
         <div class="col"></div>
       </div>
-      <div class="menuGap"></div>
+
       <hr style="width: 270px" />
       <!-- ranking -->
-      <div class="row menuBar">
+      <div class="row items-center menuBar">
         <div class="col"></div>
         <img
           class="q-pt-sm"
@@ -69,10 +68,10 @@
         <div class="textMenu col-5 q-pt-sm">อันดับ</div>
         <div class="col"></div>
       </div>
-      <div class="menuGap"></div>
+
       <hr style="width: 270px" />
       <!-- ad -->
-      <div class="row menuBar">
+      <div class="row items-center menuBar">
         <div class="col-2"></div>
         <img
           class="q-pt-sm"
@@ -84,10 +83,9 @@
         <div class="textMenu col-6 q-pt-sm q-pl-sm">โฆษณา</div>
         <div class="col"></div>
       </div>
-      <div class="menuGap"></div>
       <hr style="width: 270px" />
       <!-- admin -->
-      <div class="row menuBar">
+      <div class="row items-center menuBar">
         <div class="col"></div>
         <img
           class="q-pt-sm"
@@ -99,22 +97,43 @@
         <div class="textMenu col-5 q-pt-sm">ผู้ดูแลระบบ</div>
         <div class="col"></div>
       </div>
-      <div class="menuGap"></div>
 
       <!-- sign out -->
-      <hr style="width: 270px" />
-      <div class="row menuBar absolute-bottom" align="center">
-        <div class="col"></div>
-        <q-icon class="q-pt-sm" name="fas fa-sign-out-alt" size="25px" />
-        <div class="textMenu col-7">ออกจากระบบ</div>
-        <div class="col"></div>
+      <div class="absolute-bottom">
+        <hr style="width: 270px" />
+        <div
+          @click="goToLogIn()"
+          class="row signOutBox"
+          style="height: 60px"
+          align="center"
+        >
+          <div class="col-2"></div>
+          <div class="row items-center">
+            <q-icon class="" name="fas fa-sign-out-alt" size="25px" />
+            <div style="width: 20px"></div>
+            <div class="textMenu">ออกจากระบบ</div>
+          </div>
+          <div class="col-2"></div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    return {};
+  },
+  methods: {
+    goToCategoryPage() {
+      this.$router.push("/category");
+    },
+    goToLogIn() {
+      this.$router.push("/");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -129,24 +148,34 @@ export default {};
 .textProfile {
   font-size: 22px;
   color: #343434;
-  width: 66px;
-  height: 26px;
+
   margin: auto;
 }
 .menuBar {
   width: 270px;
-  height: 45px;
-  line-height: 45px;
-  margin: auto;
+
   cursor: pointer;
+  margin: auto;
+}
+.signOutBox {
+  width: 270px;
+  cursor: pointer;
+  margin: auto;
 }
 .menuBar:hover {
   background-color: #e5eeff;
+  margin: auto;
+}
+.signOutBox:hover {
+  background-color: #e5eeff;
+  margin: auto;
+}
+.bottomLine {
+  width: 270px;
 }
 .textMenu {
   font-size: 22px;
   color: #333333;
-  margin: auto;
 }
 .menuGap {
   height: 10px;
@@ -156,7 +185,7 @@ export default {};
 }
 .spaceBar {
   height: 58px;
-  width: 30px;
+  width: 25px;
 }
 .spaceBarAd {
   height: 58px;

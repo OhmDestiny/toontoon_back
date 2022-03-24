@@ -2,9 +2,18 @@
   <div class="mainBG">
     <div class="row">
       <div><menubar></menubar></div>
-      <div class="q-ma-lg bgBox">
+      <div class="col shadow-2 bgBox" align="center">
         <optionbar></optionbar>
-        <div class="q-ma-md"><cartoonbox></cartoonbox></div>
+        <div class="row justify-start">
+          <div
+            class="q-pt-md"
+            style="margin-left: 13px"
+            v-for="(item, index) in allBookInLibrary"
+            :key="index"
+          >
+            <cartoonbox></cartoonbox>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -21,7 +30,9 @@ export default {
     cartoonbox,
   },
   setup() {
-    return {};
+    return {
+      allBookInLibrary: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    };
   },
 };
 </script>
@@ -34,14 +45,6 @@ export default {
   max-width: 1600px;
 }
 .bgBox {
-  background-color: white;
-  max-width: 1100px;
-  width: 100%;
-<<<<<<< Updated upstream
   max-width: 1600px;
-  margin: auto;
-=======
-  max-height: 1366px;
->>>>>>> Stashed changes
 }
 </style>
