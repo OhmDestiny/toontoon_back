@@ -1,13 +1,13 @@
 <template>
   <div class="mainBG">
     <div class="row">
-      <div><menubar></menubar></div>
+      <div class=""><menubar></menubar></div>
       <div class="col shadow-2 bgBox" align="center">
         <optionbar></optionbar>
-        <div class="row justify-start">
+        <div class="row justify-start gt-md">
           <div
             class="q-pt-md"
-            style="margin-left: 13px"
+            style="width: 20%"
             v-for="(item, index) in allBookInLibrary"
             :key="index"
           >
@@ -31,7 +31,7 @@ export default {
   },
   setup() {
     return {
-      allBookInLibrary: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      allBookInLibrary: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
     };
   },
 };
@@ -45,6 +45,7 @@ export default {
   max-width: 1600px;
 }
 .bgBox {
-  max-width: 1600px;
+  max-width: 1300px;
+  width: 100%;
 }
 </style>

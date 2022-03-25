@@ -26,6 +26,7 @@ export default {};
 <style lang="scss" scoped>
 .showCartoonBox {
   width: 230px;
+
   height: 370px;
   background: #ffffff;
   position: relative;
